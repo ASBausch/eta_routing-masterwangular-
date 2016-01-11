@@ -10,7 +10,7 @@ app.controller("FormController", ['$scope', '$http', function($scope, $http) {
         method: 'get'
     }).then(function (response) {
         $scope.kitty = response.data;
-
+        console.log($scope.kitty);
     });
 
 
@@ -31,7 +31,7 @@ app.controller("FormController", ['$scope', '$http', function($scope, $http) {
             method: 'get'
         }).then(function(res){
             $scope.kitty = res.data;
-            console.log("this is doing something");
+
         });
 
         }

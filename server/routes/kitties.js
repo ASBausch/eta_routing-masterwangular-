@@ -14,7 +14,6 @@ router.post('/', function(req, res) {
 });
 
 router.get('/', function(req, res) {
-    console.log('I am get');
     return Kitty.find({
     //kittyName: {$exists: true}
 }).exec(function(err, kitties){
@@ -22,6 +21,7 @@ router.get('/', function(req, res) {
         //turns our mongo data into a usable jSon object
         var data = JSON.stringify(kitties);
         res.send(data);
+        console.log(data);
     });
 });
 
