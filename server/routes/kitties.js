@@ -7,7 +7,6 @@ var Kitty = require('../models/kittyNames');
 var mongoose = require('mongoose');
 
 router.post('/', function(req, res) {
-    console.log('I clicked');
     var kitty = new Kitty ({ kittyName: req.body.kittyName });
     kitty.save(function(err){
         if(err) console.log('meow %s', err);
@@ -15,8 +14,9 @@ router.post('/', function(req, res) {
 });
 
 router.get('/', function(req, res) {
+    console.log('I am get');
     return Kitty.find({
-    kittyName: {$exists: true}
+    //kittyName: {$exists: true}
 }).exec(function(err, kitties){
         if(err) throw new Error(err);
         //turns our mongo data into a usable jSon object

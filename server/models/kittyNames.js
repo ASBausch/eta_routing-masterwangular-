@@ -13,6 +13,7 @@ var KittySchema = new Schema({
 //with key value pairs of types
 
 
-module.exports = mongoose.model('kitty_set', KittySchema);
+//module.exports = mongoose.model('kitty_set', KittySchema);
 //telling us this is in our database and how we save it
-
+var Kitty = mongoose.model('kitty_set', KittySchema);
+module.exports = Kitty;

@@ -10,11 +10,11 @@ app.controller("FormController", ['$scope', '$http', function($scope, $http) {
         method: 'get'
     }).then(function (response) {
         $scope.kitty = response.data;
+
     });
 
 
     $scope.submit = function () {
-        console.log('hit');
         var kitty = {kittyName: $scope.kittyName};
         $http({
             url: '/kitties',
@@ -31,7 +31,7 @@ app.controller("FormController", ['$scope', '$http', function($scope, $http) {
             method: 'get'
         }).then(function(res){
             $scope.kitty = res.data;
-            console.log($scope.kitty + "this is doing something");
+            console.log("this is doing something");
         });
 
         }
