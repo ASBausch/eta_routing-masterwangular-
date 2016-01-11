@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Kitties</title>
+
+    <script src="vendors/angular.min.js"></script>
+    <script src="vendors/angular-route.js"></script>
+    <script type="text/javascript" src="vendors/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/mainController.js"></script>
+
+</head>
+<body ng-controller='FormController as form'>
+    <p>KittyFoo Name Checker</p>
+    <form name="catForm">
+        <label for="kittyName">Kitties Name:</label>
+        <input type="text" ng-model="kittyName" id="kittyName"/>
+        <button type="submit" ng-click="submit()">Name Your Kitty</button>
+    </form>
+    <div>
+            <ul class="list-group"><!--using ng-repeat to loop display the name-->
+                <li ng-repeat="kitty in kitty_set">Name: {{kitty.kittyName}}</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
