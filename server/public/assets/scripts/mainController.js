@@ -5,12 +5,13 @@ var app = angular.module('app', ['ngRoute']);
 
 
 app.controller("FormController", ['$scope', '$http', function($scope, $http) {
+    $scope.kitty = [];
+
     $http({
         url: '/kitties',
         method: 'get'
     }).then(function (response) {
         $scope.kitty = response.data;
-        console.log($scope.kitty);
     });
 
 
@@ -47,5 +48,5 @@ app.config(['$routeProvider', function($routeProvider){
 
 
 
-
+//encaplusation - try to tighten this up
 

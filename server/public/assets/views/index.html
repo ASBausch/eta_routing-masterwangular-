@@ -20,7 +20,8 @@
     <div>
             <ul class="list-group"><!--using ng-repeat to loop display the name-->
                 <li>Name: {{kittyName}}</li>
-                <li ng-repeat="kitty in Kitty">Name: {{kitty.kittyName}}</li>
+                <!--kitten is a variable name- could be anything - kitty is the array we pulled in from our database-->
+                <li ng-repeat="kitten in kitty">Name: {{kitten.kittyName}}</li>
             </ul>
         </div>
     </div>
